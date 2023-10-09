@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            html,body{
+               height:98%;
+               width:99%;
+            }
+            #container{
+                display:flex;
+                flex-wrap: wrap;
+                height:100%;
+            }
+            div div{
+                width:32%;
+                border: 1px solid black;
+            }
+            .active{
+                background-color: "white"
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id = container>
+            <div></div>
+            <div id= "top"></div>
+            <div></div>
+            <div id= "left"></div>
+            <div></div>
+            <div id= "right"></div>
+            <div></div>
+            <div id= "bottom"></div>
+            <div></div>
+        </div>
+        <script>
+            //Write your colorDown function here
+            var up = document.getElementById("top");
+            var left = document.getElementById("left");
+            var right = document.getElementById("right");
+            var down = document.getElementById("bottom");
+            document.body.addEventListener("keydown", colorDown);
+            function colorDown(event){
+                if(event.key == "ArrowUp"){
+                    up.style.backgroundColor= "yellow";
+                }else{
+                    up.style.backgroundColor= "white";
+
+                }
+                 if (event.key == "ArrowRight"){
+                    right.style.backgroundColor = "yellow";
+                } else{
+                    right.style.backgroundColor = "white";
+
+                }
+
+                 if (event.key == "ArrowLeft"){
+                    left.style.backgroundColor = "yellow";
+                } else{
+                    left.style.backgroundColor = "white";
+
+                }
+                 if(event.key == "ArrowDown"){
+                    down.style.backgroundColor = "yellow";
+                } else{
+                    down.style.backgroundColor = "white";
+
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 1. if yellow and the key is pressed it should turn white
+    2. 
+ -->
+
+
+
+
+
+
+
+
+
+
+
